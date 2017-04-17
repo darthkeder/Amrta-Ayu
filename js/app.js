@@ -112,4 +112,28 @@ amrta.controller('catCtrl', function($scope, $http){
         });
     }
 })
+
+
+amrta.controller('cashierCtrl', function($scope, $http){
+    $scope.members = [];
+    
+    $scope.findMember = function() {
+        let p = {'search_type' : $scope.search_type, 'customer_info' : $scope.customer_info};
+        $http.post('http://localhost/amrtaayu/index.php/cashier/ajax_find_member/', p).then(function(res){
+            
+        });
+    }
+    
+})
+
 ;
+
+
+$scope.addMember = function() {
+        var p = {'customer_name' : $scope.customer_name, 'customer_phone' : $scope.customer_phone, 'DOB' : $scope.DOB};
+        $http.post('http://localhost/amrtaayu/index.php/member/ajax_add_member/', p).then(function(res){
+            $scope.members = res.data;
+            $scope.alertClass = "alert alert-success";
+            $scope.alertText = "Member telah berhasil ditambahkan";
+        });
+    }

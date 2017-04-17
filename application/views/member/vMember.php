@@ -36,28 +36,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <h4 class="modal-title">Member Baru</h4>
             </div>
             <div class="modal-body">
-                <p>
-                    <form action="" class="form-horizontal">
-                        <div class="form-group">
-                            <label for="customer_name" class="col-sm-2 control-label">Nama</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="customer_name" class="form-control" ng-model="customer_name">
-                            </div>
+                <form action="" class="form-horizontal">
+                    <div class="form-group">
+                        <label for="customer_name" class="col-sm-2 control-label">Nama</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="customer_name" class="form-control" ng-model="customer_name">
                         </div>
-                        <div class="form-group">
-                            <label for="customer_phone" class="col-sm-2 control-label">Handphone</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="customer_phone" class="form-control" ng-model="customer_phone">
-                            </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="customer_phone" class="col-sm-2 control-label">Handphone</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="customer_phone" class="form-control" ng-model="customer_phone">
                         </div>
-                        <div class="form-group">
-                            <label for="DOB" class="col-sm-2 control-label">Tanggal Lahir</label>
-                            <div class="col-sm-10">
-                                <input type="date" name="DOB" class="form-control" value="" ng-model="DOB">
-                            </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="DOB" class="col-sm-2 control-label">Tanggal Lahir</label>
+                        <div class="col-sm-10">
+                            <input type="date" name="DOB" class="form-control" value="" ng-model="DOB">
                         </div>
-                    </form>
-                </p>
+                    </div>
+                </form>
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-primary" ng-click="addMember()" data-dismiss="modal">Simpan</button>
